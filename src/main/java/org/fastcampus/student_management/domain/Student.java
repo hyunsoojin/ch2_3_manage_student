@@ -1,5 +1,7 @@
 package org.fastcampus.student_management.domain;
 
+import java.awt.geom.Ellipse2D;
+
 public class Student {
 
   private final String name;
@@ -16,6 +18,20 @@ public class Student {
     this.age = age;
     this.address = address;
     this.activated = true;
+  }
+
+  public void activate(){
+    if(this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = true;
+  }
+
+  public void deactivate(){
+    if(!this.activated){
+      throw new IllegalArgumentException();
+    }
+    this.activated = false;
   }
 
   public String getName() {

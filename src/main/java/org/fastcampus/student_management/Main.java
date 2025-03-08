@@ -25,6 +25,8 @@ public class Main {
     CourseController courseController = new CourseController(coursePresenter, courseService, studentPresenter);
     StudentController studentController = new StudentController(studentPresenter, studentService);
 
+
+
     studentPresenter.showMenu();
     UserInputType userInputType = studentController.getUserInput();
     while (userInputType != UserInputType.EXIT) {
